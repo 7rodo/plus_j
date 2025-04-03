@@ -6,5 +6,5 @@ color: cb4a9b
 charge: 0.03
 research: {
   parent: lithium
-  planet: md3-fieros
+  planet: plusj-fieros
 }

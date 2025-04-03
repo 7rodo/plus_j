@@ -1,4 +1,4 @@
-name: "md3"
+name: "plusj"
 displayName: "[cyan]More[blue]Defences[]"
 subtitle: "B3.0.0"
 author: "[grey]CD[], [blue]7rodo[] and [magenta]meowkitty[]"
@@ -6,7 +6,7 @@ description: "[]A mod made by CD, meowkitty and 7rodo that features:\n- A new pl
 version: "B3.0.0"
 minGameVersion: "147"
 contentOrder: [
-  md3-fieros
+  plusj-fieros
   other-content
   reentry
   scourged-rivers

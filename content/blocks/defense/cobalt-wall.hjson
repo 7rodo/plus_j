@@ -9,6 +9,6 @@ requirements: [
 category: defense
 research: {
   parent: core-monoquark
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 alwaysUnlocked: true

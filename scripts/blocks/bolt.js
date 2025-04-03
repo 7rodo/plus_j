@@ -1,6 +1,6 @@
-const dmgroups = require("md3/units/damagegroups")
-const mditems = require("md3/items")
-const vfx = require("md3/libs/vfx")
+const dmgroups = require("plusj/units/damagegroups")
+const mditems = require("plusj/items")
+const vfx = require("plusj/libs/vfx")
 const mygroups = [
   'ironclad','unplated','battleship','attractor'
 ]

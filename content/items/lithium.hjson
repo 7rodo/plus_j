@@ -6,5 +6,5 @@ color: B87DD8
 charge: 0.12
 research: {
   parent: cobalt
-  planet: md3-fieros
+  planet: plusj-fieros
 }

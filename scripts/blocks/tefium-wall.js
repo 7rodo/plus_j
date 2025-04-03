@@ -11,7 +11,7 @@ tefiumWallProjectile.backColor = Color.valueOf('#00875a')
 const tefiumWall = extendContent(Wall, "tefium-wall", {
   load(){
     this.super$load();
-    this.region = Core.atlas.find("md3-tefium-wall")
+    this.region = Core.atlas.find("plusj-tefium-wall")
   },
   update(tile){
     this.super$update(tile);

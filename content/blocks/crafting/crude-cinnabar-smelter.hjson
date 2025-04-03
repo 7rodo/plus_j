@@ -30,7 +30,7 @@ requirements: [
 category: crafting
 research: {
   parent: laser-bore
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 researchCost: [
   cobalt/120

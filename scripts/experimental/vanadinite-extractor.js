@@ -1,4 +1,4 @@
-const mineralMD = require("md3/unmineable-ores")
+const mineralMD = require("plusj/unmineable-ores")
 
 let placeables = [mineralMD.vanadinite]
 const vanadiniteExtract = extend(GenericCrafter, "vanadinite-extractor", {

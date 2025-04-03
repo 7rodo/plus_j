@@ -1,4 +1,4 @@
-const dmgroups = require("md3/units/damagegroups")
+const dmgroups = require("plusj/units/damagegroups")
 const mygroups = [
   'basic','malis','unplated','simple','blaster'
 ]

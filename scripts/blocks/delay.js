@@ -1,4 +1,4 @@
-const statuses = require("md3/status-effects")
+const statuses = require("plusj/status-effects")
 
 let delay = extend(ContinuousLiquidTurret, "delay", {
   liquidConsumed: 20/60,

@@ -1,5 +1,5 @@
-const vfx = require("md3/libs/vfx")
-const clumps = require("md3/blocks/spore-clumps")
+const vfx = require("plusj/libs/vfx")
+const clumps = require("plusj/blocks/spore-clumps")
 const SporeT4 = extend(UnitType, "macrocybe-boat", {});
 SporeT4.constructor = () => extend(UnitWaterMove, {});
 SporeT4.immunities.add(StatusEffects.sporeSlowed);
@@ -49,7 +49,7 @@ const sporeFlame = extend(BulletType, {
   }
 })
 const mainGun = extend(Weapon, {
-  name: "md3-spore-branch",
+  name: "plusj-spore-branch",
   top: true,
   rotate: true,
   y: 2,
@@ -70,6 +70,6 @@ SporeT4.weapons.add(
 );
 
 Blocks.exponentialReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-agaricus-boat"),
-  Vars.content.getByName(ContentType.unit, "md3-macrocybe-boat")
+  Vars.content.getByName(ContentType.unit, "plusj-agaricus-boat"),
+  Vars.content.getByName(ContentType.unit, "plusj-macrocybe-boat")
 )

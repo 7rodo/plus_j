@@ -39,7 +39,7 @@ requirements: [
 category: units
 research: {
   parent: crude-cinnabar-smelter
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 researchCost: [
   cobalt/225

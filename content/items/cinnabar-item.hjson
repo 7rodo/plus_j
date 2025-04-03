@@ -6,5 +6,5 @@ color: E34234
 alwaysUnlocked: true
 research: {
   parent: cobalt
-  planet: md3-fieros
+  planet: plusj-fieros
 }

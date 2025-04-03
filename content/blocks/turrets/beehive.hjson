@@ -43,7 +43,7 @@ ammoTypes: {
     intervalAngle: 180
     intervalBullet: {
       type: BasicBulletType
-      sprite: md3-striped-bullet
+      sprite: plusj-striped-bullet
       damage: 7
       speed: 4.5
       pierce: true
@@ -78,7 +78,7 @@ ammoTypes: {
     intervalAngle: 180
     intervalBullet: {
       type: BasicBulletType
-      sprite: md3-striped-bullet
+      sprite: plusj-striped-bullet
       damage: 10
       speed: 4.5
       pierce: true
@@ -117,7 +117,7 @@ ammoTypes: {
     intervalAngle: 180
     intervalBullet: {
       type: BasicBulletType
-      sprite: md3-striped-bullet
+      sprite: plusj-striped-bullet
       damage: 0
       splashDamage: 15
       splashDamageRadius: 24

@@ -6,5 +6,5 @@ color: a8b0e6
 alwaysUnlocked: true
 research: {
   parent: core-monoquark
-  planet: md3-fieros
+  planet: plusj-fieros
 }

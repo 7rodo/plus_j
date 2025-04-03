@@ -1,6 +1,6 @@
-const statusFunc = require("md3/libs/status-functions")
-const vfx = require("md3/libs/vfx")
-const bulLib = require("md3/libs/bulletlib")
+const statusFunc = require("plusj/libs/status-functions")
+const vfx = require("plusj/libs/vfx")
+const bulLib = require("plusj/libs/bulletlib")
 
 // LH2 effect
 /*let liquidHydrogenEffect = extend(StatusEffect, "liquid-hydrogen-status-effect", {

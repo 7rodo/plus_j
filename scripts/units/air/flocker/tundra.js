@@ -1,8 +1,8 @@
-const vfx = require("md3/libs/vfx")
-const bulLib = require("md3/libs/bulletlib")
-const rng = require("md3/libs/rng")
-const blockcheck = require("md3/libs/blockcheck")
-const icewall = require("md3/blocks/frozen-wall")
+const vfx = require("plusj/libs/vfx")
+const bulLib = require("plusj/libs/bulletlib")
+const rng = require("plusj/libs/rng")
+const blockcheck = require("plusj/libs/blockcheck")
+const icewall = require("plusj/blocks/frozen-wall")
 const FlockT5 = extend(UnitType, "tundra-ship", {});
 FlockT5.constructor = () => extend(UnitEntity, {});
 
@@ -19,7 +19,7 @@ const tundraBombFrag = extend(ArtilleryBulletType, {
   frontColor: Color.valueOf("#ffffff"),
   backColor: Color.valueOf("#6ecdec"),
   collide: false,
-  sprite: 'md3-d-bomb',
+  sprite: 'plusj-d-bomb',
   hitShake: 2,
 });
 const tundraBomb = extend(BasicBulletType, {
@@ -32,7 +32,7 @@ const tundraBomb = extend(BasicBulletType, {
   height: 30,
   frontColor: Color.valueOf("#ffffff"),
   backColor: Color.valueOf("#6ecdec"),
-  sprite: 'md3-plus-bomb',
+  sprite: 'plusj-plus-bomb',
   spin: 2,
   shrinkX: 0.45,
   shrinkY: 0.45,
@@ -83,7 +83,7 @@ const tundraBomb = extend(BasicBulletType, {
 });
 
 const bombCannon = extend(Weapon, {
-  name: "md3-generic-bomber-weapon",
+  name: "plusj-generic-bomber-weapon",
   minShootVelocity: 0.25,
   mirror: false,
   x: 0,
@@ -97,7 +97,7 @@ const bombCannon = extend(Weapon, {
   autoTarget: true
 });
 const railgun = extend(Weapon, {
-  name: "md3-railgun-cannon",
+  name: "plusj-railgun-cannon",
   y: 2,
   shots: 1,
   x: 0,
@@ -129,6 +129,6 @@ FlockT5.weapons.add(
 );
 
 Blocks.tetrativeReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-messenger-ship"),
-  Vars.content.getByName(ContentType.unit, "md3-tundra-ship")
+  Vars.content.getByName(ContentType.unit, "plusj-messenger-ship"),
+  Vars.content.getByName(ContentType.unit, "plusj-tundra-ship")
 )

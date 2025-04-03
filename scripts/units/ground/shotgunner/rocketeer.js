@@ -1,4 +1,4 @@
-const bulLib = require("md3/libs/bulletlib")
+const bulLib = require("plusj/libs/bulletlib")
 const ShotT4 = extend(UnitType, "rocketeer-mech", {
   onUnlock() {
     minion.unlock()
@@ -29,7 +29,7 @@ const unitBullet = extend(BasicBulletType, {
   }
 })
 const unitLauncher = extend(Weapon, {
-  name: "md3-generic-bomber-weapon",
+  name: "plusj-generic-bomber-weapon",
   y: 0,
   x: 0,
   top: true,
@@ -72,7 +72,7 @@ const missileExplosion = extend(Weapon, {
 missile.weapons.add(missileExplosion)
 
 const missileLauncher = extend(Weapon, {
-  name: "md3-rocketeer-launcher",
+  name: "plusj-rocketeer-launcher",
   y: -3,
   x: 13,
   top: true,
@@ -100,7 +100,7 @@ ShotT4.weapons.add(
 );
 
 Blocks.exponentialReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-slugger-mech"),
-  Vars.content.getByName(ContentType.unit, "md3-rocketeer-mech")
+  Vars.content.getByName(ContentType.unit, "plusj-slugger-mech"),
+  Vars.content.getByName(ContentType.unit, "plusj-rocketeer-mech")
 )
 

@@ -11,7 +11,7 @@ coolant: false
 moveThroughBlocks: true
 research: {
   parent: cinnabar-item
-  planet: md3-fieros
+  planet: plusj-fieros
   objectives: [
     {
       type: Produce

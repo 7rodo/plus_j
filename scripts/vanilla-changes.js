@@ -1,5 +1,5 @@
-const vfx = require("md3/libs/vfx")
-const rng = require("md3/libs/rng")
+const vfx = require("plusj/libs/vfx")
+const rng = require("plusj/libs/rng")
 
 // AMMO
 let blastFuse = extend(ShrapnelBulletType, {
@@ -95,7 +95,7 @@ UnitTypes.cyerce.immunities.add(StatusEffects.electrified)
 UnitTypes.aegires.immunities.add(StatusEffects.electrified)
 UnitTypes.navanax.immunities.add(StatusEffects.electrified)
 
-function getMDUnit(unit) {return Vars.content.getByName(ContentType.unit, "md3-" + unit)}
+function getMDUnit(unit) {return Vars.content.getByName(ContentType.unit, "plusj-" + unit)}
 function getModUnit(mod, unit) {return Vars.content.getByName(ContentType.unit, mod + "-" + unit)}
 
 // NUMBERED WAVEGEN
@@ -461,20 +461,20 @@ Events.on(ClientLoadEvent, e => {
       return SectorPresets.stainedMountains.sector.hasBase() || SectorPresets.windsweptIslands.sector.hasBase()
     },
     display() {
-      return Core.bundle.format("requirement.md3-stain-or-wind");
+      return Core.bundle.format("requirement.plusj-stain-or-wind");
     }
   })
   TechTree.all.find(t => t.content == Blocks.lancer).objectives.add(stainORwind)
   TechTree.all.find(t => t.content == Blocks.parallax).objectives.add(stainORwind)
   TechTree.all.find(t => t.content == Blocks.salvo).objectives.add(stainORwind)
-  TechTree.all.find(t => t.content == Vars.content.getByName(ContentType.block, "md3-tearer")).objectives.add(stainORwind)
+  TechTree.all.find(t => t.content == Vars.content.getByName(ContentType.block, "plusj-tearer")).objectives.add(stainORwind)
   // restrict early thorium
   let tarORover = extend(Objectives.Objective,{
     complete() {
       return SectorPresets.tarFields.sector.hasBase() || SectorPresets.overgrowth.sector.hasBase()
     },
     display() {
-      return Core.bundle.format("requirement.md3-tar-or-over");
+      return Core.bundle.format("requirement.plusj-tar-or-over");
     }
   })
   TechTree.all.find(t => t.content == Blocks.fuse).objectives.add(tarORover)
@@ -484,12 +484,12 @@ Events.on(ClientLoadEvent, e => {
   TechTree.all.find(t => t.content == Blocks.thoriumReactor).objectives.add(tarORover)
   // linearize post-thorium
   TechTree.all.find(t => t.content == SectorPresets.impact0078).objectives.add(new Objectives.Research(Blocks.spectre))
-  TechTree.all.find(t => t.content == SectorPresets.impact0078).objectives.add(new Objectives.Research(Vars.content.getByName(ContentType.block, "md3-firenado")))
-  TechTree.all.find(t => t.content == SectorPresets.impact0078).objectives.add(new Objectives.SectorComplete(Vars.content.getByName(ContentType.sector, "md3-reentry")))
+  TechTree.all.find(t => t.content == SectorPresets.impact0078).objectives.add(new Objectives.Research(Vars.content.getByName(ContentType.block, "plusj-firenado")))
+  TechTree.all.find(t => t.content == SectorPresets.impact0078).objectives.add(new Objectives.SectorComplete(Vars.content.getByName(ContentType.sector, "plusj-reentry")))
   // better integrate BE sectors
   TechTree.all.find(t => t.content == SectorPresets.taintedWoods).objectives.add(new Objectives.SectorComplete(SectorPresets.fungalPass))
   // PLT sector requirements
-  TechTree.all.find(t => t.content == SectorPresets.planetaryTerminal).objectives.add(new Objectives.SectorComplete(Vars.content.getByName(ContentType.sector, "md3-scourged-rivers")))
+  TechTree.all.find(t => t.content == SectorPresets.planetaryTerminal).objectives.add(new Objectives.SectorComplete(Vars.content.getByName(ContentType.sector, "plusj-scourged-rivers")))
   
   // UTILITIES
   MapResizeDialog.minSize = 1 // maps outside of the 50x50 - 600x600 range are unsupported by anuke!!!
@@ -499,7 +499,7 @@ Events.on(ClientLoadEvent, e => {
 
 // CAPTURE TOAST
 Events.on(SectorCaptureEvent, e => {
-  if (Core.settings.getBool("md3-forcecapturetoast", true) && e.sector.isBeingPlayed()) {
+  if (Core.settings.getBool("plusj-forcecapturetoast", true) && e.sector.isBeingPlayed()) {
     Vars.ui.hudfrag.showToast(Core.bundle.format("sector.capture", ""))
   }
   if (!Vars.net.client() && Vars.state.isCampaign()) {
@@ -516,7 +516,7 @@ function playAlarm(sound,loop,time) {
   for (let i=0;i<loop;i++) Time.run(time*i, () => sound.play(Core.settings.getInt("sfxvol")/100,1,0,false,true))
 }
 Events.on(WaveEvent, e => {
-  if (Core.settings.getBool("md3-guardianwarn", true)) {
+  if (Core.settings.getBool("plusj-guardianwarn", true)) {
     let bosses = []
     let diff = 69420
     let health = 0
@@ -598,43 +598,43 @@ Events.on(WaveEvent, e => {
       switch (diff) {
         case 5:
           if (health < alarmCubedHPDivs[0]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-weakguardianwarn5", format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-weakguardianwarn5", format), 5)
             playAlarm(shittyalarm,3,60)
           } else if (health < alarmCubedHPDivs[1]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-mediumguardianwarn5", format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-mediumguardianwarn5", format), 5)
             playAlarm(mediumalarm,3,90)
           } else if (alarmCubedHPDivs[2] == null || health < alarmCubedHPDivs[2]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-strongguardianwarn5" + (bosses.length > 1 ? "b" : "a"), format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-strongguardianwarn5" + (bosses.length > 1 ? "b" : "a"), format), 5)
             playAlarm(shittingyourselfalarm,3,90)
           } else {
-            Vars.ui.announce(Core.bundle.format("wave.md3-strongguardianwarn5" + (bosses.length > 1 ? "b" : "a"), format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-strongguardianwarn5" + (bosses.length > 1 ? "b" : "a"), format), 5)
             playAlarm(shittingyourselfalarm,3,90)
           }
           break
         case 1:
           if (health < alarmCubedHPDivs[0]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-weakguardianwarn1", format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-weakguardianwarn1", format), 5)
             playAlarm(shittyalarm,3,60)
           } else if (health < alarmCubedHPDivs[1]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-mediumguardianwarn1", format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-mediumguardianwarn1", format), 5)
             playAlarm(mediumalarm,3,90)
           } else if (alarmCubedHPDivs[2] == null || health < alarmCubedHPDivs[2]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-strongguardianwarn1" + (bosses.length > 1 ? "b" : "a"), format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-strongguardianwarn1" + (bosses.length > 1 ? "b" : "a"), format), 5)
             playAlarm(shittingyourselfalarm,3,90)
           } else {
-            Vars.ui.announce(Core.bundle.format("wave.md3-strongguardianwarn1" + (bosses.length > 1 ? "b" : "a"), format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-strongguardianwarn1" + (bosses.length > 1 ? "b" : "a"), format), 5)
             playAlarm(shittingyourselfalarm,3,90)
           }
           break
         case 0:
           if (health < alarmCubedHPDivs[0]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-weakguardianwarn0" + (bosses.length > 1 ? "b" : "a"), format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-weakguardianwarn0" + (bosses.length > 1 ? "b" : "a"), format), 5)
           } else if (health < alarmCubedHPDivs[1]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-mediumguardianwarn0", format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-mediumguardianwarn0", format), 5)
           } else if (alarmCubedHPDivs[2] == null || health < alarmCubedHPDivs[2]) {
-            Vars.ui.announce(Core.bundle.format("wave.md3-strongguardianwarn0", format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-strongguardianwarn0", format), 5)
           } else {
-            Vars.ui.announce(Core.bundle.format("wave.md3-strongguardianwarn0", format), 5)
+            Vars.ui.announce(Core.bundle.format("wave.plusj-strongguardianwarn0", format), 5)
           }
           break
       }

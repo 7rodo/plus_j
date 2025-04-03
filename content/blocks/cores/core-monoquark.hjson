@@ -17,6 +17,6 @@ envDisabled: 24
 research: {
   root: true
   name: Fieros
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 alwaysUnlocked: true

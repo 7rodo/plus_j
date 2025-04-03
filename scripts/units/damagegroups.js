@@ -1,4 +1,4 @@
-function getMDUnit(unit) {return Vars.content.getByName(ContentType.unit, "md3-" + unit)}
+function getMDUnit(unit) {return Vars.content.getByName(ContentType.unit, "plusj-" + unit)}
 let groups = {
   basic: [], // t1s
   malis: [], // units introduced on sectors with malis
@@ -33,7 +33,7 @@ function addToGroups(groupList, unittype) {
     if (groups[groupList[i]] != null) groups[groupList[i]].push(unittype)
   }
 }
-let groupStatUnit = new Stat("md3-damgroupunit")
+let groupStatUnit = new Stat("plusj-damgroupunit")
 function generateGroupStatUnit(groupList) {
   let string = "[accent]"
   for (let i = 0; i < groupList.length; i++) {

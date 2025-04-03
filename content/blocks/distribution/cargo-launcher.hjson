@@ -15,7 +15,7 @@ knockback: 2
 category: distribution
 research: {
   parent: cobalt-channel
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 requirements: [
   cobalt/5

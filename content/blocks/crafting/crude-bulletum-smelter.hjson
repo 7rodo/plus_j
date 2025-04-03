@@ -28,7 +28,7 @@ outputItem: bulletum/2
 category: crafting
 research: {
   parent: crude-cinnabar-smelter
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 researchCost: [
   cobalt/275

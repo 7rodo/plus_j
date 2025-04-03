@@ -32,6 +32,6 @@ optionalBoostIntensity: 1
 category: production
 research: {
   parent: core-monoquark
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 alwaysUnlocked: true

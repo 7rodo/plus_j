@@ -1,4 +1,4 @@
-const vfx = require("md3/libs/vfx")
+const vfx = require("plusj/libs/vfx")
 
 const ShotT3 = extend(UnitType, "slugger-mech", {});
 ShotT3.constructor = () => extend(LegsUnit, {});
@@ -17,6 +17,6 @@ let suppress = extend(SuppressionFieldAbility, {
 ShotT3.abilities.add(suppress)
 
 Blocks.multiplicativeReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-pounder-mech"),
-  Vars.content.getByName(ContentType.unit, "md3-slugger-mech")
+  Vars.content.getByName(ContentType.unit, "plusj-pounder-mech"),
+  Vars.content.getByName(ContentType.unit, "plusj-slugger-mech")
 )

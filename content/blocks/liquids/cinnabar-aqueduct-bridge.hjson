@@ -12,7 +12,7 @@ requirements: [
 ]
 research: {
   parent: cinnabar-aqueduct
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 researchCost: [
   cinnabar-item/25

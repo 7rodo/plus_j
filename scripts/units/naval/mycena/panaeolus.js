@@ -1,6 +1,6 @@
-const blockcheck = require("md3/libs/blockcheck")
-const bulLib = require("md3/libs/bulletlib")
-const subturrets = require("md3/blocks/subturrets")
+const blockcheck = require("plusj/libs/blockcheck")
+const bulLib = require("plusj/libs/bulletlib")
+const subturrets = require("plusj/blocks/subturrets")
 const SporeT2 = extend(UnitType, "panaeolus-boat", {});
 SporeT2.constructor = () => extend(UnitWaterMove, {});
 SporeT2.immunities.add(StatusEffects.sporeSlowed);
@@ -33,7 +33,7 @@ const oilBullet = extend(BasicBulletType, {
   puddleLiquid: Liquids.oil,
 })
 const mainGun = extend(Weapon, {
-  name: "md3-panaeolus-gun",
+  name: "plusj-panaeolus-gun",
   top: true,
   rotate: true,
   y: -2,
@@ -129,6 +129,6 @@ SporeT2.weapons.add(
 );
 
 Blocks.additiveReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-mycena-boat"),
-  Vars.content.getByName(ContentType.unit, "md3-panaeolus-boat")
+  Vars.content.getByName(ContentType.unit, "plusj-mycena-boat"),
+  Vars.content.getByName(ContentType.unit, "plusj-panaeolus-boat")
 )

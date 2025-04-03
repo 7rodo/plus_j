@@ -89,7 +89,7 @@ const bomb = extend(BasicBulletType, {
   }
 })
 const bombGun = extend(Weapon, {
-  name: "md3-armillaria-cannon",
+  name: "plusj-armillaria-cannon",
   top: true,
   rotate: true,
   y: 22,
@@ -116,12 +116,12 @@ const bladeBullet = extend(BasicBulletType, {
   status: StatusEffects.sporeSlowed,
   statusDuration: 120,
   spin: 14,
-  sprite: 'md3-blade-bullet',
+  sprite: 'plusj-blade-bullet',
   shieldDamageMultiplier: 0.25,
 })
 const shootsound = Vars.tree.loadSound("armillaria-blade")
 const bladeGunA = extend(Weapon, {
-  name: "md3-bladegun-side",
+  name: "plusj-bladegun-side",
   top: true,
   rotate: true,
   y: 2,
@@ -134,7 +134,7 @@ const bladeGunA = extend(Weapon, {
   bullet: bladeBullet,
 });
 const bladeGunB = extend(Weapon, {
-  name: "md3-bladegun-side",
+  name: "plusj-bladegun-side",
   top: true,
   rotate: true,
   y: -16,
@@ -154,6 +154,6 @@ SporeT5.weapons.add(
 );
 
 Blocks.tetrativeReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-macrocybe-boat"),
-  Vars.content.getByName(ContentType.unit, "md3-armillaria-boat")
+  Vars.content.getByName(ContentType.unit, "plusj-macrocybe-boat"),
+  Vars.content.getByName(ContentType.unit, "plusj-armillaria-boat")
 )

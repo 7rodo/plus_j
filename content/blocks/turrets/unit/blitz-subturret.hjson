@@ -32,7 +32,7 @@ shootType: {
   statusDuration: 180
   frontColor: fccf03
   backColor: fc5a03
-  sprite: md3-blade-bullet
+  sprite: plusj-blade-bullet
   height: 12
   width: 12
   shrinkX: 0

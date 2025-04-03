@@ -13,6 +13,6 @@ requirements: [
 ]
 research: {
   parent: cobalt-channel
-  planet: md3-fieros
+  planet: plusj-fieros
 }
 alwaysUnlocked: true

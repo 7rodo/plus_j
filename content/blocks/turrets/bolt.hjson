@@ -12,7 +12,7 @@ ammoPerShot: 6
 shootCone: 0.2
 drawer: {
   type: DrawTurret
-  basePrefix: md3-fieros-
+  basePrefix: plusj-fieros-
 }
 requirements: [
   cobalt/130

@@ -1,6 +1,6 @@
-const subturrets = require("md3/blocks/subturrets")
-const blockcheck = require("md3/libs/blockcheck")
-const bulLib = require("md3/libs/bulletlib")
+const subturrets = require("plusj/blocks/subturrets")
+const blockcheck = require("plusj/libs/blockcheck")
+const bulLib = require("plusj/libs/bulletlib")
 
 const ShotT5 = extend(UnitType, "blitz-mech", {});
 ShotT5.constructor = () => extend(LegsUnit, {});
@@ -37,7 +37,7 @@ const turretBullet = extend(BasicBulletType, {
   }
 })
 const turretLauncher = extend(Weapon, {
-  name: "md3-generic-bomber-weapon",
+  name: "plusj-generic-bomber-weapon",
   y: 0,
   x: 0,
   top: true,
@@ -49,7 +49,7 @@ const turretLauncher = extend(Weapon, {
   bullet: turretBullet,
 });
 const missileLauncher = extend(Weapon, {
-  name: "md3-blitz-missile-cannon",
+  name: "plusj-blitz-missile-cannon",
   y: 6,
   x: 17,
   top: true,
@@ -91,6 +91,6 @@ ShotT5.weapons.add(
 );
 
 Blocks.tetrativeReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-rocketeer-mech"),
-  Vars.content.getByName(ContentType.unit, "md3-blitz-mech")
+  Vars.content.getByName(ContentType.unit, "plusj-rocketeer-mech"),
+  Vars.content.getByName(ContentType.unit, "plusj-blitz-mech")
 )

@@ -9,6 +9,6 @@ let heal = extend(RegenAbility, {
 SporeT3.abilities.add(heal);
 
 Blocks.multiplicativeReconstructor.addUpgrade(
-  Vars.content.getByName(ContentType.unit, "md3-panaeolus-boat"),
-  Vars.content.getByName(ContentType.unit, "md3-agaricus-boat")
+  Vars.content.getByName(ContentType.unit, "plusj-panaeolus-boat"),
+  Vars.content.getByName(ContentType.unit, "plusj-agaricus-boat")
 )

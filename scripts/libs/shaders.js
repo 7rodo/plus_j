@@ -1,10 +1,10 @@
 let dmmShader
 let dmmShaderCache
 Events.on(ClientLoadEvent, e => {
-  if (Core.settings.getBool("md3-loadshaders", true)) {
-    let environment = require("md3/blocks/environment")
+  if (Core.settings.getBool("plusj-loadshaders", true)) {
+    let environment = require("plusj/blocks/environment")
     try {
-      dmmShader = new Shaders.SurfaceShader(Vars.tree.get("shaders/screenspace.vert").readString(), Vars.tree.get("shaders/md3-dmm.frag").readString())
+      dmmShader = new Shaders.SurfaceShader(Vars.tree.get("shaders/screenspace.vert").readString(), Vars.tree.get("shaders/plusj-dmm.frag").readString())
       dmmShaderCache = new CacheLayer.ShaderLayer(dmmShader)
       CacheLayer.add(0, dmmShaderCache);
       environment.dimethyl.cacheLayer = dmmShaderCache
