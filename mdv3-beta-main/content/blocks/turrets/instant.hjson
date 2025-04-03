@@ -1,0 +1,126 @@
+name: Instant
+description: Fires fast, hard-hitting tungsten missiles at air units. Missiles redirect at enemies with the least max health and are highly effective against weak units, but have trouble penetrating the armor of higher tier air units.
+health: 1620
+size: 3
+reload: 45
+range: 200
+shootSound: missileSmall
+inaccuracy: 0
+rotateSpeed: 2.5
+shootCone: 135
+shoot: {
+  type: ShootAlternate
+  shots: 2
+  barrels: 2
+  shotDelay: 0
+  spread: 10
+}
+targetGround: false
+unitSort: weakest
+drawer: {
+  type: DrawTurret
+  basePrefix: reinforced-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -launcher-spike-l
+      x: -8
+      y: 6.25
+      progress: recoil
+      moveX: -5
+      moveY: -1.75
+      moveRot: 90
+    }
+    {
+      type: RegionPart
+      suffix: -launcher-spike-l
+      x: -8
+      y: 2
+      progress: recoil
+      moveX: -5
+      moveY: -1.75
+      moveRot: 90
+    }
+    {
+      type: RegionPart
+      suffix: -launcher-spike-l
+      x: -8
+      y: -2.25
+      progress: recoil
+      moveX: -5
+      moveY: -1.75
+      moveRot: 90
+    }
+    {
+      type: RegionPart
+      suffix: -launcher-spike-r
+      x: 8
+      y: 6.25
+      progress: recoil
+      moveX: 5
+      moveY: -1.75
+      moveRot: -90
+    }
+    {
+      type: RegionPart
+      suffix: -launcher-spike-r
+      x: 8
+      y: 2
+      progress: recoil
+      moveX: 5
+      moveY: -1.75
+      moveRot: -90
+    }
+    {
+      type: RegionPart
+      suffix: -launcher-spike-r
+      x: 8
+      y: -2.25
+      progress: recoil
+      moveX: 5
+      moveY: -1.75
+      moveRot: -90
+    }
+    {
+      type: RegionPart
+      suffix: -launcher-l
+      x: -5.75
+      progress: recoil
+      layerOffset: 0.001
+      moveX: -1.25
+      moveY: -1.75
+      under: true
+    }
+    {
+      type: RegionPart
+      suffix: -launcher-r
+      x: 5.75
+      progress: recoil
+      layerOffset: 0.001
+      moveX: 1.25
+      moveY: -1.75
+      under: true
+    }
+  ]
+}
+ammoPerShot: 3
+maxAmmo: 15
+requirements: [
+  beryllium/200
+  silicon/250
+  graphite/250
+  oxide/60
+]
+category: turret
+research: {
+  parent: sublimate
+  planet: erekir
+  # requiresUnlock: false
+  objectives: [
+    {
+      type: SectorComplete
+      # \/ temporary, todo: replace with custom optional sector branching from marsh
+      preset: ravine
+    }
+  ]
+}
